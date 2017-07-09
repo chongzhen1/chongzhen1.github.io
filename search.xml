@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[text2]]></title>
+    <url>%2F2017%2F07%2F09%2F1%2F</url>
+    <content type="text"><![CDATA[123 密码密码密码！！！]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[test]]></title>
     <url>%2F2017%2F07%2F09%2Ftest%2F</url>
     <content type="text"><![CDATA[haha 123abc 1234567#include &lt;iostream&gt;using namespace std;const int N = 105;int main() &#123; puts("hello");&#125;]]></content>
