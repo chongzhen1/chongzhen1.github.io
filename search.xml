@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[test]]></title>
     <url>%2F2017%2F07%2F09%2F1%2F</url>
-    <content type="text"><![CDATA[Hello, I’m a test post1234567 abcdefg 123456#include &lt;iostream&gt;#include &lt;cstdio&gt;using namespace std;int main() &#123; puts("hello");&#125; $$f(x) = \frac{x\ln x + x^3}{e^x}$$]]></content>
+    <content type="text"><![CDATA[Hello, I’m a test post1234567 abcdefg 123456#include &lt;iostream&gt;#include &lt;cstdio&gt;using namespace std;int main() &#123; puts("hello");&#125; $$f(x) = \frac{x\ln x + x^3}{e^x}$$ blah blah blah hi]]></content>
       <tags>
         <tag>cat</tag>
       </tags>
