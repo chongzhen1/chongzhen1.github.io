@@ -5,7 +5,10 @@
     <url>%2F2017%2F07%2F10%2Funsaturation%2F</url>
     <content type="text"><![CDATA[题目背景化学老师让同学们出题！昌老师担任有机组组长！ Candy?出了一道数不饱和度的题目，昌老师不会做所以拒绝接受！！！ 于是Candy?又出了一道用 $Polya定理$ 数卤代烃个数的题目，然后把原来这道题扔给了你。 题目内容你有一个有多个环的烷烃的键线式，求他的不饱和度。 值得注意的是，键线式的C原子并没有标出来，并且线可能是直线、斜线或者曲线，上面的C原子数目不定。 下面有几个例子，其中X表示线，0表示空： 1 7XXXXXXX 是一个饱和链烃，不一定有几个C，不饱和度是0. 4 7XXXXXXXXOOOOOXXOOOOOXXXXXXXX 最简单的情况就是一个4个C的环烷烃，不饱和度为1. 3 7XXXXX000X0X0X000XXXXX 这是一个有两个环的烃，不饱和度是2 它可能张这个样子 4 7000X00000X0X000X000X00XXXXX0 她的不饱和度是1，样子自行脑补，我懒得画了。 输入输出 &amp; 数据规模输入一个n行m列的矩阵，X表示线，0表示空，是一个有机物的键线式。输出他的不饱和度 $n,m &lt; 1000$ 样例Sample Input123454 7XXXXXXXXOOOOOXXOOOOOXXXXXXXX Sample Output11 下面是题解和标程 题解最初的想法来自2016.6.26 那时候觉得复杂环式结构的烷烃不饱和度好神奇，从图论的角度考察了一下，还写了一篇周记。 一年后做化学题又想到了这个东西，拿着它去考灰哥有没有忘记我的周记，结果他随手用了另一种方法，好快好有趣，貌似正确性有待商榷。我尝试卡了一下，发现好像只有平面图成立，然后证明了一下成功了。 后来我发现那就是欧拉公式，并且我的证明和他一模一样，如果我早出生是不是可以叫Candy?公式……. 扔定理就跑： 定理1：任意一个烷烃可以看成无向简单图$G(V,E)$，那么他的不饱和度为$$\mid E\mid - \mid V\mid +1$$其中$V$是点集，$E$是边集 定理2：如果由烷烃得到的图$G$是平面图，那么$$它把平面划分成的区域数(除去最外围平面) = \mid E\mid - \mid V\mid +1$$平面图就是能画在平面上使得边仅在顶点处相交的图。 证明去看欧拉公式的吧，不想写。 这样一来对于化学题，一眼就看出不饱和度了。 但是出成OI题的话，如果标出C的位置可以用数分子式的方法很快水过去，所以才变成不确定C原子，这样的话就需要得到上面的定理然后搜一下0组成的连通块数就好了，小心外圈的0没有连起来。 大多数人应该不会这个方法吧，昌老师就不会 Candy? : 你怎么知道这个方法的 (惊恐) 某冰 : 不就应该是这样吗 (一脸鄙视) 标程123456789101112131415161718192021222324252627#include &lt;iostream&gt;#include &lt;cstdio&gt;#include &lt;cstring&gt;#include &lt;algorithm&gt;using namespace std;typedef long long ll;const int N = 105;int n, m, ans;char s[N][N]; int dfc, vis[N][N];inline bool valid(int x, int y) &#123;return x &gt;= 0 &amp;&amp; y &gt;= 0 &amp;&amp; x &lt;= n &amp;&amp; y &lt;= m &amp;&amp; s[x][y] != 'X' &amp;&amp; !vis[x][y];&#125;void dfs(int x, int y) &#123; vis[x][y] = dfc; if(valid(x-1, y)) dfs(x-1, y); if(valid(x+1, y)) dfs(x+1, y); if(valid(x, y-1)) dfs(x, y-1); if(valid(x, y+1)) dfs(x, y+1);&#125;int main() &#123; freopen("in", "r", stdin); scanf("%d %d", &amp;n, &amp;m); for(int i=1; i&lt;=n; i++) scanf("%s", s[i]+1); n++; m++; for(int i=0; i&lt;=n; i++) for(int j=0; j&lt;=m; j++) if(s[i][j] != 'X' &amp;&amp; !vis[i][j]) dfc++, dfs(i, j); printf("%d", dfc-1);&#125;]]></content>
       <tags>
-        <tag>problem, article, chemistry, math</tag>
+        <tag>problem</tag>
+        <tag>article</tag>
+        <tag>chemistry</tag>
+        <tag>math</tag>
       </tags>
   </entry>
   <entry>
