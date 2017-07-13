@@ -1,8 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[important]]></title>
+    <url>%2F2017%2F07%2F13%2Fimportant%2F</url>
+    <content type="text"><![CDATA[一.概述 网站主体完成撒花 时间@7.13 21:08 以前弄杂志时的文章Candy?这里的找不到了，tlq没有备份，主编死掉了，以前的班的电脑上不知道还有没有。 网站的名字、简介、图标待定。 买域名 投稿！！！ 招聘编辑！！！(以前的成员呢) 二. 如何投稿 通过任何途径把稿件(纯文本)发给我就行了 如果你不觉得麻烦，请在稿件之前加入如下内容： 123456789---title: importantcopyright: truetop: 0date: 2017-07-13 21:06:51tags: [作者名字, ]categories: []password:--- 其中date后写上你写完文章时的时间，作者名字用你的名字替换。 如果有图片，请单独存放。 多篇文章请压缩。 三.编辑的工作 给稿件分类。注意分类是有逻辑层次的，是由普遍到特殊的，一篇文章只能从属一种分类，一个大分类有多个小分类。 给稿件打标签。标签没有逻辑层次，随便打。其中有一个标签是作者姓名。 用markdown格式化文章]]></content>
+      <categories>
+        <category>我也不知道这是什么分类</category>
+      </categories>
+      <tags>
+        <tag>to_do_list</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[hi]]></title>
     <url>%2F2017%2F07%2F13%2Fhi%2F</url>
     <content type="text"></content>
+      <categories>
+        <category>文学</category>
+        <category>古代</category>
+        <category>111</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+        <tag>cat</tag>
+      </tags>
   </entry>
 </search>
